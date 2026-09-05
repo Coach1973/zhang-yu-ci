@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>張育慈｜順業肥料資材行 — 彰化溪州．有機肥料與農業資材</title>
+<meta name="description" content="順業肥料資材行．彰化縣溪州鄉。創立於 1996 年的家族肥料商行，第二代張育慈（慕斯）以中餐乙級廚師的背景回鄉接棒，專營有機肥料、植物營養劑與農業資材，走天然稀有、價格公道的中高端路線。">
+<meta property="og:title" content="張育慈｜順業肥料資材行">
+<meta property="og:description" content="從土壤到餐桌。彰化溪州，三十年的肥料家業，第二代的接棒。">
+<meta property="og:type" content="profile">
+<meta property="og:image" content="assets/og-card.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23191410'/%3E%3Cpath d='M16 6c0 6-5 8-5 13a5 5 0 0 0 10 0c0-5-5-7-5-13z' fill='none' stroke='%23e0603f' stroke-width='2'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;500;600;700&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  /* ---- neutrals: 濁水溪沖積土 × 米紙 ---- */
+  --soil:      #191410;
+  --soil-2:    #221a15;
+  --soil-3:    #2e241c;
+  --paper:     #f3eee4;
+  --paper-2:   #e9e2d4;
+  --ink:       #1a1512;
+  --ink-soft:  #5d5145;
+  --ink-faint: #6f6355;
+  --on-soil:      #ede6da;
+  --on-soil-soft: #a89a8a;
+  /* ---- single accent: 肥料袋上的印色紅 ---- */
+  --accent:      #ab3a1f;   /* on paper */
+  --accent-lift: #e0603f;   /* on soil  */
+
+  --rule-paper: rgba(26,21,18,.14);
+  --rule-soil:  rgba(237,230,218,.15);
+
+  --serif: "Noto Serif TC", "Songti TC", "PMingLiU", "SimSun", Georgia, serif;
+  --sans:  "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", system-ui, sans-serif;
+  --mono:  ui-monospace, "SFMono-Regular", "Menlo", "Consolas", monospace;
+
+  --pad: clamp(1.25rem, 5vw, 5.5rem);
+  --maxw: 1240px;
+  --measure: 34em;
+}
+:root{ --on-soil-soft:#a89a8a; }
+
+*,*::before,*::after{ box-sizing:border-box; }
+html{ -webkit-text-size-adjust:100%; scroll-behavior:smooth; }
+@media (prefers-reduced-motion: reduce){ html{ scroll-behavior:auto; } }
+body{
+  margin:0; background:var(--paper); color:var(--ink);
+  font-family:var(--sans); font-weight:400; font-size:clamp(15.5px,.55vw + 14px,17px);
+  line-height:1.75; letter-spacing:.01em;
+  -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+}
+img{ max-width:100%; display:block; height:auto; }
+a{ color:inherit; }
+
+/* grain — 一層極細的紙／土質感 */
+body::after{
+  content:""; position:fixed; inset:0; z-index:9; pointer-events:none; opacity:.42;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='.32'/%3E%3C/svg%3E");
+  mix-blend-mode:multiply;
+}
+
+/* ============ shared bits ============ */
+.wrap{ max-width:var(--maxw); margin-inline:auto; padding-inline:var(--pad); }
+.tag{
+  font-family:var(--mono); font-size:.688rem; font-weight:500;
+  text-transform:uppercase; letter-spacing:.16em; color:var(--ink-faint);
+}
+.soil .tag{ color:var(--on-soil-soft); }
+.eyebrow{
+  font-family:var(--mono); font-size:.7rem; letter-spacing:.2em; text-transform:uppercase;
+  color:var(--accent); display:flex; align-items:center; gap:.9em; margin:0 0 1.6rem;
+}
+.soil .eyebrow{ color:var(--accent-lift); }
+.hero .eyebrow{ color:var(--on-soil-soft); }
+.eyebrow::after{ content:""; flex:1; height:1px; background:currentColor; opacity:.35; max-width:8rem; }
+
+h1,h2,h3,h4,blockquote{ font-family:var(--serif); font-weight:600; margin:0; }
+h2{ font-size:clamp(1.75rem,3.2vw,2.7rem); line-height:1.28; letter-spacing:-.01em; }
+h3{ font-size:clamp(1.125rem,1.5vw,1.35rem); line-height:1.45; letter-spacing:0; font-weight:600; }
+p{ margin:0 0 1.15em; }
+.lede{ font-size:1.075rem; color:var(--ink-soft); max-width:var(--measure); }
+.soil .lede{ color:var(--on-soil-soft); }
+
+section{ position:relative; }
+.soil{ background:var(--soil); color:var(--on-soil); }
+.band{ padding-block:clamp(4.5rem,9vw,9rem); }
+.band--tight{ padding-block:clamp(3rem,5vw,4.5rem); }
+hr.rule{ border:0; height:1px; background:var(--rule-paper); margin:0; }
+.soil hr.rule{ background:var(--rule-soil); }
+
+/* ============ top bar ============ */
+.topbar{
+  position:sticky; top:0; z-index:20; background:rgba(25,20,16,.86);
+  backdrop-filter:saturate(1.4) blur(10px); border-bottom:1px solid var(--rule-soil);
+  color:var(--on-soil);
+}
+.topbar__in{ display:flex; align-items:center; justify-content:space-between; gap:1rem;
+  max-width:var(--maxw); margin-inline:auto; padding:.7rem var(--pad); }
+.brandmark{ display:flex; align-items:baseline; gap:.6rem; text-decoration:none; }
+.brandmark b{ font-family:var(--serif); font-weight:600; font-size:1.02rem; letter-spacing:.02em; }
+.brandmark span{ font-family:var(--mono); font-size:.65rem; letter-spacing:.14em; text-transform:uppercase; color:var(--on-soil-soft); }
+.topnav{ display:flex; gap:1.4rem; align-items:center; }
+.topnav a{ font-size:.82rem; text-decoration:none; color:var(--on-soil-soft); letter-spacing:.04em; transition:color .16s ease; }
+.topnav a:hover{ color:var(--on-soil); }
+@media (max-width:820px){ .topnav a:not(.cta-mini){ display:none; } }
+.cta-mini{
+  border:1px solid rgba(224,96,63,.55); color:var(--accent-lift)!important;
+  padding:.42em 1em; border-radius:2px; font-family:var(--mono); font-size:.7rem!important;
+  letter-spacing:.12em; text-transform:uppercase; transition:background .16s ease,color .16s ease;
+}
+.cta-mini:hover{ background:var(--accent-lift); color:var(--soil)!important; }
+
+/* ============ hero ============ */
+.hero{ position:relative; background:var(--soil); color:var(--on-soil); overflow:hidden; }
+.hero__bg{ position:absolute; inset:0; }
+.hero__bg img{ width:100%; height:100%; object-fit:cover; opacity:.4; filter:saturate(.72) contrast(1.05); }
+.hero__bg::after{
+  content:""; position:absolute; inset:0;
+  background:linear-gradient(180deg, rgba(25,20,16,.82) 0%, rgba(25,20,16,.5) 42%, rgba(25,20,16,.95) 100%);
+}
+.hero__in{ position:relative; padding-block:clamp(5rem,13vw,10.5rem) clamp(2rem,4vw,3rem); }
+.hero h1{
+  font-size:clamp(2.55rem,7.4vw,5.6rem); line-height:1.08; letter-spacing:-.022em;
+  font-weight:600; max-width:15em; margin:0 0 1.6rem; text-wrap:balance;
+}
+.hero h1 em{ font-style:normal; color:var(--accent-lift); display:block; }
+.hero__who{
+  display:flex; flex-wrap:wrap; align-items:baseline; gap:.35rem 1rem; margin-bottom:2.6rem;
+}
+.hero__who strong{ font-family:var(--serif); font-size:1.35rem; font-weight:500; letter-spacing:.06em; }
+.hero__who span{ color:var(--on-soil-soft); font-size:.92rem; }
+
+/* 標本標籤式 metadata */
+.specimen{
+  display:grid; grid-template-columns:repeat(auto-fit,minmax(148px,1fr));
+  border-top:1px solid var(--rule-soil); border-bottom:1px solid var(--rule-soil);
+}
+.specimen div{ padding:1.05rem 1.2rem 1.05rem 0; border-right:1px solid var(--rule-soil); }
+.specimen div:last-child{ border-right:0; }
+.specimen div:not(:first-child){ padding-left:1.2rem; }
+@media (max-width:640px){
+  .specimen div{ border-right:0; border-bottom:1px solid var(--rule-soil); padding-left:0!important; }
+  .specimen div:last-child{ border-bottom:0; }
+}
+.specimen dt{ font-family:var(--mono); font-size:.63rem; letter-spacing:.18em; text-transform:uppercase;
+  color:var(--on-soil-soft); margin-bottom:.5rem; }
+.specimen dd{ margin:0; font-size:.94rem; line-height:1.45; }
+.specimen dd b{ font-family:var(--serif); font-weight:500; font-size:1.05rem; letter-spacing:.02em; }
+
+/* ============ manifesto ============ */
+.manifesto{ background:var(--soil-2); color:var(--on-soil); }
+.manifesto p{
+  font-family:var(--serif); font-weight:300; font-size:clamp(1.5rem,3.5vw,2.65rem);
+  line-height:1.5; letter-spacing:-.005em; max-width:19em; margin:0;
+}
+.manifesto p b{ font-weight:600; color:var(--accent-lift); }
+.manifesto .tag{ margin-top:2.2rem; display:block; }
+
+/* ============ about ============ */
+.about__grid{ display:grid; grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr); gap:clamp(2rem,5vw,4.5rem); align-items:start; }
+@media (max-width:900px){ .about__grid{ grid-template-columns:1fr; } }
+.portrait{ position:relative; }
+.portrait img{ width:100%; height:auto; aspect-ratio:778/1000; object-fit:contain; filter:grayscale(.15) contrast(1.02); }
+.portrait figcaption{
+  font-family:var(--mono); font-size:.66rem; letter-spacing:.14em; text-transform:uppercase;
+  color:var(--ink-faint); padding-top:.85rem; border-top:1px solid var(--rule-paper); margin-top:.85rem;
+}
+.about__body p{ max-width:var(--measure); }
+.about__body p:first-of-type{ font-size:1.12rem; color:var(--ink); }
+.pull{
+  border-left:2px solid var(--accent); padding-left:1.4rem; margin:2.4rem 0;
+  font-family:var(--serif); font-size:1.22rem; line-height:1.65; font-weight:500; max-width:26em;
+}
+
+/* ============ timeline ============ */
+.tl{ list-style:none; margin:0; padding:0; position:relative; }
+.tl::before{ content:""; position:absolute; left:0; top:.6rem; bottom:.6rem; width:1px; background:var(--rule-soil); }
+.tl li{ position:relative; padding:0 0 2.5rem 2.2rem; }
+.tl li:last-child{ padding-bottom:0; }
+.tl li::before{
+  content:""; position:absolute; left:-3px; top:.62rem; width:7px; height:7px; border-radius:50%;
+  background:var(--soil); border:1px solid var(--on-soil-soft);
+}
+.tl li.is-now::before{ background:var(--accent-lift); border-color:var(--accent-lift); }
+.tl time{ font-family:var(--mono); font-size:.72rem; letter-spacing:.14em; color:var(--on-soil-soft); display:block; margin-bottom:.4rem; }
+.tl h3{ margin-bottom:.35rem; }
+.tl p{ color:var(--on-soil-soft); font-size:.93rem; margin:0; max-width:30em; }
+.split{ display:grid; grid-template-columns:minmax(0,.72fr) minmax(0,1fr); gap:clamp(2rem,5vw,5rem); align-items:start; }
+@media (max-width:880px){ .split{ grid-template-columns:1fr; } }
+
+/* ============ two-track: 土壤 × 餐桌 ============ */
+.tracks{ display:grid; grid-template-columns:1fr auto 1fr; gap:0; align-items:stretch; margin-top:3.5rem; }
+.track{ padding:clamp(1.75rem,3vw,2.75rem) clamp(1.5rem,3vw,3rem); }
+.track:first-child{ padding-left:0; }
+.track:last-child{ padding-right:0; }
+.tracks__seam{ width:1px; background:var(--rule-paper); position:relative; }
+.tracks__seam::after{
+  content:""; position:absolute; left:50%; top:50%; transform:translate(-50%,-50%) rotate(45deg);
+  width:9px; height:9px; background:var(--accent);
+}
+@media (max-width:820px){
+  .tracks{ grid-template-columns:1fr; }
+  .tracks__seam{ width:100%; height:1px; }
+  .track{ padding-inline:0; }
+  .track:first-child{ padding-bottom:2rem; }
+  .track:last-child{ padding-top:2rem; }
+}
+.track .tag{ display:block; margin-bottom:1rem; }
+.track h3{ font-size:clamp(1.3rem,2vw,1.6rem); margin-bottom:.9rem; }
+.track p{ color:var(--ink-soft); font-size:.96rem; }
+.track ul{ margin:1.2rem 0 0; padding:0; list-style:none; }
+.track li{ font-size:.92rem; color:var(--ink-soft); padding:.5rem 0; border-top:1px solid var(--rule-paper); }
+
+/* ============ offer cards ============ */
+.offers{ display:grid; grid-template-columns:repeat(auto-fit,minmax(228px,1fr)); border-top:1px solid var(--rule-paper); }
+.offer{ padding:2.1rem 1.6rem 2.1rem 0; border-right:1px solid var(--rule-paper); }
+.offer:not(:first-child){ padding-left:1.6rem; }
+.offer:last-child{ border-right:0; }
+@media (max-width:760px){
+  .offer{ border-right:0; border-bottom:1px solid var(--rule-paper); padding-left:0!important; }
+  .offer:last-child{ border-bottom:0; }
+}
+.offer svg{ width:26px; height:26px; stroke:var(--accent); fill:none; stroke-width:1.7; stroke-linecap:round; stroke-linejoin:round; margin-bottom:1.1rem; }
+.offer h3{ margin-bottom:.5rem; }
+.offer p{ font-size:.9rem; color:var(--ink-soft); margin:0; }
+
+/* ============ principles ============ */
+.principles{ counter-reset:p; display:grid; gap:clamp(1.5rem,3vw,2.4rem); }
+.principle{ display:grid; grid-template-columns:auto 1fr; gap:clamp(1.2rem,3vw,2.6rem); align-items:start;
+  padding-top:1.8rem; border-top:1px solid var(--rule-soil); }
+.principle__no{
+  counter-increment:p; font-family:var(--mono); font-size:.72rem; letter-spacing:.12em;
+  color:var(--on-soil-soft); padding-top:.5rem; min-width:2.5rem;
+}
+.principle__no::before{ content:"0" counter(p); }
+.principle h3{ font-size:clamp(1.3rem,2.4vw,1.85rem); margin-bottom:.6rem; }
+.principle p{ color:var(--on-soil-soft); max-width:34em; margin:0; }
+
+/* ============ photo band ============ */
+.photoband{ display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--rule-paper); }
+@media (max-width:760px){ .photoband{ grid-template-columns:1fr 1fr; } .photoband figure:last-child{ grid-column:1 / -1; aspect-ratio:16/10; } }
+.photoband figure{ margin:0; background:var(--paper); position:relative; aspect-ratio:4/5; overflow:hidden; }
+.photoband img{ width:100%; height:100%; object-fit:cover; }
+.photoband figcaption{
+  position:absolute; left:0; bottom:0; right:0; padding:1.5rem 1.4rem .95rem;
+  background:linear-gradient(transparent,rgba(25,20,16,.88));
+  color:#ede6da; font-family:var(--mono); font-size:.66rem; letter-spacing:.13em; text-transform:uppercase;
+}
+
+/* ============ referral ============ */
+.ref__grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:1px; background:var(--rule-paper); margin-top:2.8rem; }
+.cue{ background:var(--paper); padding:1.7rem 1.5rem; }
+.cue .tag{ display:block; margin-bottom:.9rem; }
+.cue p{ font-family:var(--serif); font-size:1.08rem; line-height:1.6; margin:0 0 .7rem; }
+.cue small{ display:block; font-size:.85rem; color:var(--ink-soft); line-height:1.6; }
+.give{ display:flex; flex-wrap:wrap; gap:.55rem; margin-top:2.6rem; }
+.chip{
+  font-size:.83rem; letter-spacing:.03em; padding:.42em 1em; border:1px solid var(--rule-paper);
+  border-radius:2px; color:var(--ink-soft);
+}
+
+/* ============ contact ============ */
+.contact__grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(210px,1fr)); gap:2rem clamp(1.5rem,4vw,3rem); margin-top:3rem; }
+.field dt{ font-family:var(--mono); font-size:.65rem; letter-spacing:.18em; text-transform:uppercase; color:var(--on-soil-soft); margin-bottom:.6rem; }
+.field dd{ margin:0; font-size:1rem; line-height:1.6; }
+.field dd a{ text-decoration:none; border-bottom:1px solid rgba(237,230,218,.3); padding-bottom:1px; transition:border-color .16s ease; }
+.field dd a:hover{ border-color:var(--accent-lift); }
+.tbd{ color:var(--on-soil-soft); font-family:var(--mono); font-size:.78rem; letter-spacing:.1em;
+  border:1px dashed var(--rule-soil); padding:.3em .7em; display:inline-block; }
+.bigcta{ margin-top:3.5rem; }
+.btn{
+  display:inline-flex; align-items:center; gap:.75em; text-decoration:none;
+  background:var(--accent-lift); color:#17110d; font-weight:500; letter-spacing:.04em;
+  padding:.95em 1.9em; border-radius:2px; font-size:.98rem;
+  transition:transform .14s ease, box-shadow .14s ease;
+}
+.btn:hover{ transform:translateY(-2px); box-shadow:0 6px 22px rgba(224,96,63,.22); }
+.btn:active{ transform:translateY(0); }
+.btn svg{ width:17px; height:17px; stroke:currentColor; fill:none; stroke-width:2; }
+
+footer{ background:var(--soil); color:var(--on-soil-soft); border-top:1px solid var(--rule-soil); }
+.foot{ display:flex; flex-wrap:wrap; gap:1rem 2rem; justify-content:space-between; align-items:center;
+  padding-block:2.2rem; font-size:.8rem; }
+.foot p{ margin:0; }
+
+.skip{ position:absolute; left:-9999px; top:0; z-index:50; background:var(--accent);
+  color:#fff; padding:.7em 1.2em; text-decoration:none; font-size:.9rem; }
+.skip:focus{ left:.6rem; top:.6rem; }
+
+/* focus + motion */
+a:focus-visible, .btn:focus-visible{ outline:2px solid var(--accent-lift); outline-offset:3px; border-radius:2px; }
+.soil a:focus-visible{ outline-color:var(--accent-lift); }
+.reveal{ opacity:0; transform:translateY(18px); transition:opacity .62s cubic-bezier(.2,.7,.3,1), transform .62s cubic-bezier(.2,.7,.3,1); }
+.reveal.in{ opacity:1; transform:none; }
+@media (prefers-reduced-motion:reduce){
+  .reveal{ opacity:1; transform:none; transition:none; }
+  .btn:hover{ transform:none; }
+}
+</style>
+</head>
+<body>
+
+<a class="skip" href="#top">跳到主要內容</a>
+
+<header class="topbar">
+  <div class="topbar__in">
+    <a class="brandmark" href="#top"><b>順業肥料資材行</b><span>Shun-Yeh&nbsp;Fertilizer</span></a>
+    <nav class="topnav" aria-label="主要導覽">
+      <a href="#about">關於育慈</a>
+      <a href="#soil-to-table">土壤到餐桌</a>
+      <a href="#offer">產品與服務</a>
+      <a href="#principles">選品原則</a>
+      <a href="#referral">給 BNI 夥伴</a>
+      <a class="cta-mini" href="#contact">聯絡</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero soil" aria-labelledby="hero-h">
+    <div class="hero__bg" aria-hidden="true">
+      <img src="assets/xizhou-plain.jpg" alt="" width="2000" height="1125">
+    </div>
+    <div class="wrap hero__in">
+      <p class="eyebrow">BNI 真誠分會 · 專業類別 肥料資材</p>
+      <h1 id="hero-h">土地會記得<br>你放了什麼進去。<em>所以我挑得很慢。</em></h1>
+      <div class="hero__who">
+        <strong>張育慈</strong>
+        <span>順業肥料資材行 負責人 · 頻道名「慕斯」</span>
+      </div>
+      <dl class="specimen">
+        <div><dt>Location</dt><dd><b>彰化縣溪州鄉</b><br>濁水溪沖積平原</dd></div>
+        <div><dt>Established</dt><dd><b>1996</b><br>家族經營迄今</dd></div>
+        <div><dt>統一編號</dt><dd><b>97844322</b><br>獨資 · 彰化縣政府核准設立</dd></div>
+        <div><dt>Category</dt><dd><b>肥料資材</b><br>有機肥料 · 植物營養劑 · 農業資材</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- ============ MANIFESTO ============ -->
+  <section class="manifesto band band--tight">
+    <div class="wrap reveal">
+      <p>肥料這一行，比的不是誰喊得便宜，<br>是<b>三年後那塊地還願不願意長東西</b>。</p>
+      <span class="tag">順業的立場</span>
+    </div>
+  </section>
+
+  <hr class="rule">
+
+  <!-- ============ ABOUT ============ -->
+  <section id="about" class="band">
+    <div class="wrap">
+      <div class="about__grid">
+        <figure class="portrait reveal">
+          <img src="assets/yuci-portrait.jpg" alt="順業肥料資材行負責人張育慈的形象照" width="778" height="1000" loading="lazy">
+          <figcaption>張育慈 Chang Yu-Tzu ／ 溪州</figcaption>
+        </figure>
+        <div class="about__body reveal">
+          <p class="eyebrow">關於育慈</p>
+          <h2>先學會做菜，<br>才回來賣肥料。</h2>
+          <p>國中的時候，他放了學就跟著父母跑車送貨。二十公斤的肥料袋一包一包搬上車，哪一款下田、哪一款下果樹，是在車斗上聽會的，不是在書上背的。</p>
+          <p>高中他讀的卻是餐飲科。畢業後拿到中餐乙級技術士證照，在蔬食餐廳、Fine Dining、五星飯店的廚房裡待過，學各國菜系的烹調手法，也學怎麼認識一樣食材、怎麼把它原本的味道完整交出來。</p>
+          <p>疫情那幾年，他回到彰化溪州，接下家裡經營三十年的肥料商行。從此他看一株作物的角度就跟同行不太一樣——別人看的是產量，他還會多想一句：這東西最後會被誰吃下去。</p>
+          <blockquote class="pull">在廚房，你對不起食材，客人第一口就知道。<br>在田裡，你對不起土壤，要三年後才知道。</blockquote>
+          <p>這也是他從父親身上接下來的做生意方式：話說出口就要算數，價格不隨行情亂喊，賣不對的東西寧可不賣。三十年在地口碑，是這樣一車一車累積的。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TIMELINE ============ -->
+  <section class="soil band">
+    <div class="wrap split">
+      <div class="reveal">
+        <p class="eyebrow">兩代人</p>
+        <h2>三十年，<br>兩雙手。</h2>
+        <p class="lede">一家肥料行能在同一個鄉鎮做滿三十年，靠的不是行銷，是每一年都還有人願意再打第二通電話。</p>
+      </div>
+      <ol class="tl reveal">
+        <li>
+          <time>1996</time>
+          <h3>順業肥料資材行創立</h3>
+          <p>父親在彰化縣溪州鄉起家，以有機肥料買賣為本業，服務濁水溪畔的農友。</p>
+        </li>
+        <li>
+          <time>國中時期</time>
+          <h3>從車斗開始的第一課</h3>
+          <p>跟著父母送貨、認識品項與用途，也看著父親如何跟農友談價、如何處理一次出錯的訂單。</p>
+        </li>
+        <li>
+          <time>餐飲養成</time>
+          <h3>餐飲專科 · 中餐乙級技術士</h3>
+          <p>蔬食餐廳、Fine Dining、五星飯店。學的是食材的脾氣，帶回來的是對「品質」的另一套標準。</p>
+        </li>
+        <li>
+          <time>疫情期間</time>
+          <h3>返鄉接棒</h3>
+          <p>回到溪州承接家業，重新盤整品項結構，把重心壓在天然、稀有、可長期供應的產品線上。</p>
+        </li>
+        <li class="is-now">
+          <time>現在</time>
+          <h3>第二代的順業</h3>
+          <p>經營肥料商行的同時，維持自己的實驗農園與食農教育內容，把田間試出來的東西直接講給農友聽。</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============ SOIL TO TABLE ============ -->
+  <section id="soil-to-table" class="band">
+    <div class="wrap">
+      <div class="reveal" style="max-width:44em">
+        <p class="eyebrow">他真正少見的地方</p>
+        <h2>同一個人，握過鏟子，<br>也握過鍋鏟。</h2>
+        <p class="lede">農業資材這一行懂肥料的人很多，懂料理的人很多，兩邊同時是專業的，很少。這讓順業能回答一個大部分同業回答不了的問題：這樣施肥，最後端上桌會是什麼味道。</p>
+      </div>
+
+      <div class="tracks reveal">
+        <div class="track">
+          <span class="tag">Track 01 — 土壤端</span>
+          <h3>肥料職人</h3>
+          <p>從根部生長出發，依作物、土質、季節與水分條件調整配方建議，而不是把同一包肥料賣給所有人。自營實驗農園，做中學、學中做，新品項先在自己的地裡種過才敢推薦。</p>
+          <ul>
+            <li>有機肥料的選用與施用時機</li>
+            <li>植物營養劑與根系管理</li>
+            <li>化學農業資材的合理搭配</li>
+          </ul>
+        </div>
+        <div class="tracks__seam" aria-hidden="true"></div>
+        <div class="track">
+          <span class="tag">Track 02 — 餐桌端</span>
+          <h3>中餐乙級廚師</h3>
+          <p>知道一顆蔬菜怎麼種、也知道它怎麼被煮。透過「慕斯の田園小廚房」分享從田地到廚房再到餐桌的完整過程，做食農教育、推廣在地食材與減少不必要的資源浪費。</p>
+          <ul>
+            <li>有機／無毒蔬菜的栽種分享</li>
+            <li>藥食同源系列料理</li>
+            <li>彰化溪州在地食材與文化推廣</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PHOTO BAND ============ -->
+  <section class="band--tight" aria-label="田間與倉儲實景">
+    <div class="photoband">
+      <figure>
+        <img src="assets/warehouse-stock.jpg" alt="倉庫棧板上整齊堆疊的青綠色 20 公斤裝肥料袋" width="675" height="1200" loading="lazy" style="object-position:center 40%">
+        <figcaption>庫存 · 20&nbsp;kg 裝</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/pellet-hand.jpg" alt="一掌心的黑色柱狀有機顆粒肥料，背景是青綠色的肥料包裝袋" width="1400" height="1050" loading="lazy" style="object-position:52% center">
+        <figcaption>顆粒有機肥 · 進貨檢視</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/field-apply.jpg" alt="以手捧起黑色顆粒肥料，施放在作物根部周圍的泥土上" width="675" height="1200" loading="lazy" style="object-position:center 62%">
+        <figcaption>施用於根部 · 實驗農園</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ============ OFFER ============ -->
+  <section id="offer" class="band">
+    <div class="wrap">
+      <div class="reveal" style="max-width:40em; margin-bottom:2.8rem">
+        <p class="eyebrow">產品與服務</p>
+        <h2>四條主線。</h2>
+      </div>
+      <div class="offers reveal">
+        <article class="offer">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3c0 5-5 6.5-5 11a5 5 0 0 0 10 0c0-4.5-5-6-5-11z"/><path d="M12 21v-7"/></svg>
+          <h3>有機肥料</h3>
+          <p>核心業務。以天然來源與長效地力為選品前提，涵蓋顆粒與粉狀劑型。</p>
+        </article>
+        <article class="offer">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 20h14"/><path d="M12 20V9"/><path d="M12 12c-3 0-5-2-5-5 3 0 5 2 5 5z"/><path d="M12 14c3 0 5-2 5-5-3 0-5 2-5 5z"/></svg>
+          <h3>植物營養劑</h3>
+          <p>針對根系發育與生長階段的補強方案，依作物與季節條件建議搭配。</p>
+        </article>
+        <article class="offer">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16"/><path d="M6 7v12a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V7"/><path d="M9 7V5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2"/><path d="M10 12v4M14 12v4"/></svg>
+          <h3>化學農業資材</h3>
+          <p>與有機肥搭配使用的必要資材，講求合理用量與清楚的使用說明。</p>
+        </article>
+        <article class="offer">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6.5A2.5 2.5 0 0 1 5.5 4H11v16H5.5A2.5 2.5 0 0 1 3 17.5z"/><path d="M21 6.5A2.5 2.5 0 0 0 18.5 4H13v16h5.5a2.5 2.5 0 0 0 2.5-2.5z"/></svg>
+          <h3>食農教育</h3>
+          <p>實驗農園、栽種與料理內容分享。不是單向教學，是經驗交流。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PRINCIPLES ============ -->
+  <section id="principles" class="soil band">
+    <div class="wrap">
+      <div class="reveal" style="max-width:40em; margin-bottom:3rem">
+        <p class="eyebrow">選品原則</p>
+        <h2>為什麼順業不打價格戰。</h2>
+        <p class="lede">三十年下來，這家店只守三條規矩。它們同時也是育慈判斷一項新產品要不要進的標準。</p>
+      </div>
+      <div class="principles reveal">
+        <article class="principle">
+          <div class="principle__no" aria-hidden="true"></div>
+          <div>
+            <h3>天然稀有性</h3>
+            <p>盡可能不賣同行手上已經有的東西。找的是別家調不到、農友在市面上不容易遇見的品項。這讓順業的價值不建立在比價，而建立在「只有這裡有」。</p>
+          </div>
+        </article>
+        <article class="principle">
+          <div class="principle__no" aria-hidden="true"></div>
+          <div>
+            <h3>中高端定位</h3>
+            <p>清楚選擇不進入削價競爭。願意為品質付出的農友，需要的是一個不會因為市場亂而偷偷換料的供應商。順業把資源放在這群人身上。</p>
+          </div>
+        </article>
+        <article class="principle">
+          <div class="principle__no" aria-hidden="true"></div>
+          <div>
+            <h3>價格穩定、公道</h3>
+            <p>不看人喊價，不趁缺貨抬價。價格穩定聽起來不性感，但對每一季都要抓成本的農友來說，這就是最實際的信用。也是業界口碑的來源。</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CLIENTS ============ -->
+  <section class="band">
+    <div class="wrap split">
+      <div class="reveal">
+        <p class="eyebrow">服務對象</p>
+        <h2>只要牽涉到根，<br>就是我們的事。</h2>
+      </div>
+      <div class="reveal">
+        <p class="lede" style="font-size:1.05rem">順業的客戶大致分成兩類：一類是農業資材零售通路（例如興農店等在地農藥資材行），一類是直接下田的農友與農場。</p>
+        <p class="lede">共同點是——他們的作物成敗都跟根部生長脫不了關係：需要養地、需要調整土質、需要在對的時間給對的東西。約有一半的生意來自轉介紹，其餘來自與農業相關的陌生開發。</p>
+        <div class="give">
+          <span class="chip">農友 · 農場</span>
+          <span class="chip">農藥資材零售商</span>
+          <span class="chip">果樹 · 蔬菜栽培</span>
+          <span class="chip">養地 · 土壤改良需求</span>
+          <span class="chip">有機／無毒栽培</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="rule">
+
+  <!-- ============ REFERRAL (BNI) ============ -->
+  <section id="referral" class="band">
+    <div class="wrap">
+      <div class="reveal" style="max-width:42em">
+        <p class="eyebrow">給 BNI 真誠分會的夥伴</p>
+        <h2>聽到這幾句話，<br>請想到我。</h2>
+        <p class="lede">最好的引薦不必懂肥料。你只要在對話裡聽見下面任何一句，把我的名字丟出去就可以了。</p>
+      </div>
+
+      <div class="ref__grid reveal">
+        <div class="cue">
+          <span class="tag">Cue 01</span>
+          <p>「我家那塊地種不太起來。」</p>
+          <small>土壤養分失衡、地力衰退，正是需要重新盤整施肥策略的時候。</small>
+        </div>
+        <div class="cue">
+          <span class="tag">Cue 02</span>
+          <p>「我想找不一樣的肥料。」</p>
+          <small>市面上到處都買得到的東西，這裡通常沒有。稀有品項是順業的主場。</small>
+        </div>
+        <div class="cue">
+          <span class="tag">Cue 03</span>
+          <p>「肥料商一直換料、一直漲價。」</p>
+          <small>價格穩定與品項不亂換，是三十年的招牌，也是最常被轉介紹的理由。</small>
+        </div>
+        <div class="cue">
+          <span class="tag">Cue 04</span>
+          <p>「我在做有機／無毒栽培。」</p>
+          <small>有機肥料是本業核心，且育慈自己也有實驗農園可以對照經驗。</small>
+        </div>
+        <div class="cue">
+          <span class="tag">Cue 05</span>
+          <p>「我開資材行／想找上游。」</p>
+          <small>順業長期服務農業資材零售通路，可談穩定供應與品項差異化。</small>
+        </div>
+        <div class="cue">
+          <span class="tag">Cue 06</span>
+          <p>「我們想辦食農教育活動。」</p>
+          <small>從栽種到料理的完整內容，加上中餐乙級的料理專業，可以直接落地。</small>
+        </div>
+      </div>
+
+      <div class="reveal" style="margin-top:3.5rem; max-width:42em">
+        <p class="eyebrow">我能提供給夥伴的</p>
+        <div class="give">
+          <span class="chip">肥料與農業資材專業知識</span>
+          <span class="chip">中餐乙級料理專業</span>
+          <span class="chip">彰化在地農業人脈</span>
+          <span class="chip">家族三十年生意經驗</span>
+          <span class="chip">食農教育內容合作</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section id="contact" class="soil band">
+    <div class="wrap">
+      <div class="reveal" style="max-width:40em">
+        <p class="eyebrow">聯絡順業</p>
+        <h2>先聊你的地，<br>再談要用什麼。</h2>
+        <p class="lede">不用先想好要買什麼。把作物、土質狀況和你遇到的問題講一遍，我們再一起決定該不該花這筆錢。</p>
+      </div>
+
+      <dl class="contact__grid reveal">
+        <div class="field">
+          <dt>商號</dt>
+          <dd>順業肥料資材行<br>負責人 張育慈</dd>
+        </div>
+        <div class="field">
+          <dt>地址</dt>
+          <dd>彰化縣溪州鄉溪厝村新路 18 號</dd>
+        </div>
+        <div class="field">
+          <dt>統一編號</dt>
+          <dd>97844322</dd>
+        </div>
+        <div class="field">
+          <dt>電話 · LINE</dt>
+          <dd><span class="tbd">請提供後補上</span></dd>
+        </div>
+        <div class="field">
+          <dt>頻道</dt>
+          <dd><a href="https://www.ganjingworld.com/@Mousse?tab=collection" target="_blank" rel="noopener">慕斯の田園小廚房 →</a></dd>
+        </div>
+        <div class="field">
+          <dt>商務社群</dt>
+          <dd>BNI 真誠分會<br>專業類別：肥料資材</dd>
+        </div>
+      </dl>
+
+      <div class="bigcta reveal">
+        <a class="btn" href="https://www.ganjingworld.com/@Mousse?tab=collection" target="_blank" rel="noopener">
+          看育慈怎麼從田裡講到餐桌
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <p>順業肥料資材行 · 彰化縣溪州鄉 · 創立於 1996 年</p>
+    <p>張育慈（慕斯）個人品牌頁 · BNI 真誠分會</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var els = document.querySelectorAll('.reveal');
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches || !('IntersectionObserver' in window)) {
+    els.forEach(function(el){ el.classList.add('in'); });
+    return;
+  }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
+  els.forEach(function(el){ io.observe(el); });
+})();
+</script>
+</body>
+</html>
