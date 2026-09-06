@@ -15,23 +15,23 @@
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;500;600;700&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  /* ---- neutrals: 濁水溪沖積土 × 米紙 ---- */
-  --soil:      #191410;
-  --soil-2:    #221a15;
-  --soil-3:    #2e241c;
-  --paper:     #f3eee4;
-  --paper-2:   #e9e2d4;
-  --ink:       #1a1512;
-  --ink-soft:  #5d5145;
-  --ink-faint: #6f6355;
-  --on-soil:      #ede6da;
-  --on-soil-soft: #a89a8a;
-  /* ---- single accent: 肥料袋上的印色紅 ---- */
-  --accent:      #ab3a1f;   /* on paper */
-  --accent-lift: #e0603f;   /* on soil  */
+  /* ---- neutrals: 改為明亮暖色系（米奶油 × 土壤淺褐）---- */
+  --soil:      #fdf6ec;   /* 改：米白底，取代深棕 */
+  --soil-2:    #f5ead4;   /* 改：淺奶油 */
+  --soil-3:    #ecdcc0;   /* 改：沙色 */
+  --paper:     #fffbf3;   /* 改：更亮的紙色 */
+  --paper-2:   #f7eed8;
+  --ink:       #2a1f15;
+  --ink-soft:  #6b5944;
+  --ink-faint: #8a7864;
+  --on-soil:      #2a1f15;   /* 改：深棕字，配亮底 */
+  --on-soil-soft: #7a6650;
+  /* ---- accent: 暖陽橘，取代暗紅 ---- */
+  --accent:      #d4622a;   /* 改：暖橘 */
+  --accent-lift: #b8521d;   /* 改：深一階暖橘 */
 
-  --rule-paper: rgba(26,21,18,.14);
-  --rule-soil:  rgba(237,230,218,.15);
+  --rule-paper: rgba(180,120,60,.18);
+  --rule-soil:  rgba(120,80,40,.18);
 
   --serif: "Noto Serif TC", "Songti TC", "PMingLiU", "SimSun", Georgia, serif;
   --sans:  "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", system-ui, sans-serif;
@@ -93,7 +93,7 @@ hr.rule{ border:0; height:1px; background:var(--rule-paper); margin:0; }
 
 /* ============ top bar ============ */
 .topbar{
-  position:sticky; top:0; z-index:20; background:rgba(25,20,16,.86);
+  position:sticky; top:0; z-index:20; background:rgba(253,246,236,.86);
   backdrop-filter:saturate(1.4) blur(10px); border-bottom:1px solid var(--rule-soil);
   color:var(--on-soil);
 }
@@ -116,10 +116,10 @@ hr.rule{ border:0; height:1px; background:var(--rule-paper); margin:0; }
 /* ============ hero ============ */
 .hero{ position:relative; background:var(--soil); color:var(--on-soil); overflow:hidden; }
 .hero__bg{ position:absolute; inset:0; }
-.hero__bg img{ width:100%; height:100%; object-fit:cover; opacity:.4; filter:saturate(.72) contrast(1.05); }
+.hero__bg img{ width:100%; height:100%; object-fit:cover; opacity:.55; filter:saturate(1.1) contrast(1.02); }
 .hero__bg::after{
   content:""; position:absolute; inset:0;
-  background:linear-gradient(180deg, rgba(25,20,16,.82) 0%, rgba(25,20,16,.5) 42%, rgba(25,20,16,.95) 100%);
+  background:linear-gradient(180deg, rgba(253,246,236,.72) 0%, rgba(253,246,236,.35) 42%, rgba(253,246,236,.88) 100%);
 }
 .hero__in{ position:relative; padding-block:clamp(5rem,13vw,10.5rem) clamp(2rem,4vw,3rem); }
 .hero h1{
@@ -163,7 +163,7 @@ hr.rule{ border:0; height:1px; background:var(--rule-paper); margin:0; }
 .about__grid{ display:grid; grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr); gap:clamp(2rem,5vw,4.5rem); align-items:start; }
 @media (max-width:900px){ .about__grid{ grid-template-columns:1fr; } }
 .portrait{ position:relative; }
-.portrait img{ width:100%; height:auto; aspect-ratio:778/1000; object-fit:contain; filter:grayscale(.15) contrast(1.02); }
+.portrait img{ width:100%; height:auto; aspect-ratio:778/1000; object-fit:contain; filter:saturate(1.08) contrast(1.02); }
 .portrait figcaption{
   font-family:var(--mono); font-size:.66rem; letter-spacing:.14em; text-transform:uppercase;
   color:var(--ink-faint); padding-top:.85rem; border-top:1px solid var(--rule-paper); margin-top:.85rem;
