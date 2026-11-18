@@ -677,5 +677,20 @@ a:focus-visible, .btn:focus-visible{ outline:2px solid var(--accent-lift); outli
   els.forEach(function(el){ io.observe(el); });
 })();
 </script>
+<script>
+/* 字級下限（2026-11-18 教練指示：正文不到 20px 請調大；導覽、頁尾、標籤維持原樣） */
+(function(){
+  var SEL='p,li,blockquote,dd,h2,h3,h4,.lede,figcaption';
+  var SKIP='nav,header,footer,.top,.menu,.chip,.tag,.skip,[class*=eyebrow],[class*=meta],[class*=mono],[class*=mv-num],[class*=mv-tempo],[class*=kicker],[class*=label],[class*=num]';
+  function fix(){
+    document.querySelectorAll(SEL).forEach(function(el){
+      if(el.closest(SKIP)) return;
+      if(!el.textContent.trim()) return;
+      if(parseFloat(getComputedStyle(el).fontSize)<20) el.style.fontSize='20px';
+    });
+  }
+  fix();
+})();
+</script>
 </body>
 </html>
